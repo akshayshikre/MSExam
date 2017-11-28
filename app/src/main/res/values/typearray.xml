@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="typearray">
+        <item>Assignment</item>
+        <item>Unit Test</item>
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+        <item>Final Test</item>
+    </string-array>
+
+</resources>

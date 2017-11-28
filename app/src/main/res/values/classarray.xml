@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="classarray">
+        <item>Std 1</item>
+        <item>Std 2</item>
+        <item>Std 3</item>
+        <item>Std 4</item>
+        <item>Std 5</item>
+        <item>Std 6</item>
+        <item>Std 7</item>
+        <item>Std 8</item>
+        <item>Std 9</item>
+        <item>Std 10</item>
+        <item>Std 11</item>
+        <item>Std 12</item>
+    </string-array>
+</resources>
