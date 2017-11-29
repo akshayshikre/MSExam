@@ -31,7 +31,7 @@ import static com.example.akash.mindspaceexam.StartQuizActivity.examduration;
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
 
     String link = "http://"+serverip+"/mindspaceexam/time_reader.php";
-
+    CountDownTimer t;
     int timeTaken;
     DatabaseHelper qd;
     TextView timerLabel;
@@ -136,11 +136,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                     .equals(answerForCurrentQuestion))
                 marks++;
             group.clearCheck();
-            if (questionCount == totalQuestions) {
+            if (questionCount == totalQuestions) {                //i have stop timer here
                 Intent i = new Intent(this, ResultActivity.class);
                 i.putExtra("marks", marks);
                 i.putExtra("timeTaken", (timeTaken%60));
                 i.putExtra("startTime", startTime);
+                t.cancel();
                 startActivity(i);
                 finish();
             } else {
@@ -158,7 +159,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void startTimer(final long finish, long tick) {
-        CountDownTimer t = new CountDownTimer(finish, tick) {
+         t = new CountDownTimer(finish, tick) {
 
             public void onTick(long millisUntilFinished) {
                 long remainedSecs = millisUntilFinished / 1000;

@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,7 +42,8 @@ public class AddQuestionsActivity extends AppCompatActivity {
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
 
-        examcode=getIntent().getStringExtra("examcode");
+        examcode=getIntent().getStringExtra("examcode")
+        ;
         noofq=getIntent().getStringExtra("noofq");
         qBox = (EditText) findViewById(R.id.editText1);
         aBox = (EditText) findViewById(R.id.editText2);
@@ -139,7 +141,8 @@ public class AddQuestionsActivity extends AppCompatActivity {
                 dBox.setText("");
                 i++;
                 qno.setText("Question :-"+i+"/"+noofq);
-                if(i>=(Integer.parseInt(noofq)+1)) finish();
+                Log.i("noofq",i+"/"+noofq);
+                if(i==(Integer.parseInt(noofq)+1)) finish();
             }
         }
     }
