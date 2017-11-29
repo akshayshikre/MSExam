@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -23,6 +24,7 @@ import static com.example.akash.mindspaceexam.SplashActivity.serverip;
 
 public class CreateExamActivity extends AppCompatActivity {
     Button bcreate;
+    TextView tm;
     EditText edclass, edbranch, edsubject, edtopic, edtypeexam, ednoofquest, edmarksprquest, edexamcode, edexamdate,
             edexamduration, edremark, edgradea, edgradeb, edgradec, edgraded, edpassword;
     public String cclass, cbranch, csubject, ctopic, ctypeexam, cnoofquest, cmarksprquest, cexamcode, cexamdate,
@@ -33,7 +35,7 @@ public class CreateExamActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_exam);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
-
+        tm= (TextView) findViewById(R.id.totalmarks);
         bcreate = (Button) findViewById(R.id.btnsubmit);
         edclass = (EditText) findViewById(R.id.edclass);
         edbranch = (EditText) findViewById(R.id.edbranch);
@@ -71,6 +73,18 @@ public class CreateExamActivity extends AppCompatActivity {
                 cgraded = edgraded.getText().toString();
                 cpassword = edpassword.getText().toString();
                 new  AddExamCode().execute();
+            }
+        });
+        edmarksprquest.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+    /* When focus is lost check that the text field
+    * has valid values.
+    */
+                if (!hasFocus) {
+                    tm.setText("Total Marks:"+((Integer.parseInt(edmarksprquest.getText().toString()))*(Integer.parseInt(ednoofquest.getText().toString()))));
+                }
             }
         });
     }

@@ -26,16 +26,11 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
 
         b1 = (Button) findViewById(R.id.btnextquestion);
-        b2 = (Button) findViewById(R.id.button2);
-        b3 = (Button) findViewById(R.id.button3);
-        b4 = (Button) findViewById(R.id.button4);
-        b5 = (Button) findViewById(R.id.button5);
+
 
         b1.setOnClickListener(this);
-        b2.setOnClickListener(this);
-        b3.setOnClickListener(this);
-        b4.setOnClickListener(this);
-        b5.setOnClickListener(this);
+
+
 
     }
 
