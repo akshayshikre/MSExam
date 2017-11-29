@@ -3,6 +3,8 @@ package com.example.akash.mindspaceexam;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +23,10 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_start);
         //	ActionBar bar = getActionBar();
         //	bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
+
         btn2 = (Button) findViewById(R.id.button2);
         btn2.setOnClickListener(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

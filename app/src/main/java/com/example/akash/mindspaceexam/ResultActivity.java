@@ -1,6 +1,8 @@
 package com.example.akash.mindspaceexam;
 
 import android.app.AlertDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +51,9 @@ public class ResultActivity extends AppCompatActivity {
 
         //ActionBar bar = getActionBar();
         //bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
 
         label = (TextView) findViewById(R.id.textView1);
         tname = (TextView) findViewById(R.id.textView5);

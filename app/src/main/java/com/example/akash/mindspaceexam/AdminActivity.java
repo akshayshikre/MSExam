@@ -1,6 +1,8 @@
 package com.example.akash.mindspaceexam;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,9 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
         //ActionBar bar = getActionBar();
         //bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
 
         b1 = (Button) findViewById(R.id.btnextquestion);
         b2 = (Button) findViewById(R.id.button2);

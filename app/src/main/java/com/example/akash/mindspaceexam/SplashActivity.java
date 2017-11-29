@@ -10,15 +10,18 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class SplashActivity extends AppCompatActivity {
-    public static final String serverip="192.168.1.116";
+    public static final String serverip="192.168.1.117";
     ImageView anm;Intent in;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);// remove title
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_splash);
+
         anm = (ImageView) findViewById(R.id.imageView);
         //getSupportActionBar().hide();
         anm.setBackgroundResource(R.drawable.animation_list);

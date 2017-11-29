@@ -1,6 +1,8 @@
 package com.example.akash.mindspaceexam;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,6 +56,9 @@ public class StartQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_quiz);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
         spbranch = (Spinner) findViewById(R.id.spbranchname);
         spclass = (Spinner) findViewById(R.id.spclassname);
         spsubject = (Spinner) findViewById(R.id.spsubjectname);

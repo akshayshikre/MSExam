@@ -1,5 +1,7 @@
 package com.example.akash.mindspaceexam;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +38,9 @@ public class AddQuestionsActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_questions);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
         examcode=getIntent().getStringExtra("examcode");
         noofq=getIntent().getStringExtra("noofq");
         qBox = (EditText) findViewById(R.id.editText1);
@@ -133,8 +138,8 @@ public class AddQuestionsActivity extends AppCompatActivity {
                 cBox.setText("");
                 dBox.setText("");
                 i++;
-                qno.setText("Question :-"+String.valueOf(i)+"/"+noofq);
-                if(i>=(Integer.parseInt(noofq))) finish();
+                qno.setText("Question :-"+i+"/"+noofq);
+                if(i>=(Integer.parseInt(noofq)+1)) finish();
             }
         }
     }

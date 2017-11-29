@@ -1,6 +1,8 @@
 package com.example.akash.mindspaceexam;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +31,9 @@ public class CreateExamActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_exam);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#5f9ea0")));
+
         bcreate = (Button) findViewById(R.id.btnsubmit);
         edclass = (EditText) findViewById(R.id.edclass);
         edbranch = (EditText) findViewById(R.id.edbranch);
